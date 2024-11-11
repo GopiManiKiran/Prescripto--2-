@@ -1,0 +1,84 @@
+/* Navbar styles */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Ensures logo and links are spread out */
+    align-items: center; /* Vertically centers items */
+    padding: 20px 30px; /* Adds more padding for better spacing */
+    background-color: lightskyblue !important; /* Blue background with high specificity */
+    position: fixed; /* Keeps navbar fixed at the top of the page */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Ensures navbar is always on top of other content */
+  }
+  
+  .navbar-logo {
+    font-size: 24px;
+    color: #fff; /* White color for the logo */
+    margin-right: 20px; /* Adds spacing between logo and navbar links */
+  }
+  
+  .navbar-links {
+    display: flex; /* Flexbox for the links */
+    list-style: none;
+    margin: 0; /* Removes default margin */
+    padding: 0; /* Removes default padding */
+  }
+  
+  .navbar-links li {
+    margin-left: 10px; /* Reduced space between each link */
+  }
+  
+  .navbar-links a {
+    color: #fff; /* White color for text */
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar-links a:hover {
+    color: #d4d4d4; /* Light gray color on hover */
+  }
+  
+  .navbar-links li:first-child {
+    margin-left: 0; /* Removes the left margin on the first link */
+  }
+  
+  .navbar-links li.profile a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+    padding: 5px 10px; /* Adds space around text for better readability */
+  }
+  
+  .navbar-links li.profile a:hover {
+    color: #d4d4d4;
+  }
+  
+  body {
+    margin-top: 80px; /* Ensures content does not hide behind the fixed navbar */
+  }
+  
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column; /* Stacks navbar elements vertically on smaller screens */
+      align-items: center; /* Centers the items in the navbar */
+    }
+  
+    .navbar-logo {
+      margin-bottom: 10px; /* Adds space between logo and navbar links on small screens */
+    }
+  
+    .navbar-links {
+      flex-direction: column; /* Stacks the links vertically */
+      align-items: center; /* Centers links */
+      width: 100%; /* Makes sure the links take up the full width */
+      padding: 0 20px; /* Adds some padding to the sides */
+    }
+  
+    .navbar-links li {
+      margin: 10px 0; /* Adds space between each link */
+    }
+  }
+  
